@@ -1,0 +1,7 @@
+{
+    "app_id": "schoolproject-rwark",
+    "config_version": 20210101,
+    "name": "SchoolProject",
+    "location": "AU",
+    "deployment_model": "LOCAL"
+}
