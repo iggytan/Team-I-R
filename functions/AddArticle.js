@@ -2,5 +2,5 @@
 exports = function({ query, headers, body}, response) {
     var mycollection = context.services.get("mongodb-atlas").db("zhitecliffe").collection("articles");
     mycollection.insertOne(response);
-    return {"query": query, "headers": headers, "body": body, "response": response};
+    return response;
 };
