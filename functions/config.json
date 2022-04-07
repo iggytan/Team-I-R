@@ -1,5 +1,13 @@
 [
     {
+        "name": "Admin_Add_Article",
+        "private": false
+    },
+    {
+        "name": "Admin_Delete_Article",
+        "private": false
+    },
+    {
         "name": "GetAllArticles",
         "private": false,
         "run_as_system": true
@@ -10,11 +18,7 @@
         "run_as_system": true
     },
     {
-        "name": "Admin_Add_Article",
-        "private": false
-    },
-    {
-        "name": "Admin_Delete_Article",
+        "name": "Admin_Update_Article",
         "private": false
     }
 ]
