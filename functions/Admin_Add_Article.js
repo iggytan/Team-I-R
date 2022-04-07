@@ -1,8 +1,8 @@
     exports = function(arg){
     var collection = context.services.get("mongodb-atlas").db("zhitecliffe").collection("articles");
     collection.insertMany([
-    {Category : "Arts"},
-    {Type : "Biography"},
+    {"Category" : "Arts"},
+    {"Type" : "Biography"},
     {"Name": "Vincent Van Gogh"},
     {"Born": "1600"},
     {"Died": "1640"},
