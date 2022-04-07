@@ -1,6 +1,7 @@
 // This function is the endpoint's request handler.
 exports = function({ query, headers, body}, response) {
     var mycollection = context.services.get("mongodb-atlas").db("zhitecliffe").collection("articles");
-    mycollection.insertOne(response.body);
-    return {"query" : query, "headers": headers, "body": body, "response": response};
+    mycollection.insertOne(response);
+    var test = {"query" : query, "headers": headers, "body": body, "response": response}
+    return test;
 };
