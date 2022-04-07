@@ -1,11 +1,12 @@
 [
     {
-        "name": "GetAllArticles",
+        "name": "AddArticle",
         "private": false,
         "run_as_system": true
     },
     {
-        "name": "AddArticle",
-        "private": false
+        "name": "GetAllArticles",
+        "private": false,
+        "run_as_system": true
     }
 ]
