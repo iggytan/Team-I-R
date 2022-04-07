@@ -1,18 +1,5 @@
 [
     {
-        "name": "Admin_Delete_Article",
-        "private": false
-    },
-    {
-        "name": "Admin_Update_Article",
-        "private": false
-    },
-    {
-        "name": "GetAllArticles",
-        "private": false,
-        "run_as_system": true
-    },
-    {
         "name": "Student_Browse_Category",
         "private": false
     },
@@ -24,5 +11,18 @@
     {
         "name": "Admin_Add_Article",
         "private": false
+    },
+    {
+        "name": "Admin_Delete_Article",
+        "private": false
+    },
+    {
+        "name": "Admin_Update_Article",
+        "private": false
+    },
+    {
+        "name": "GetAllArticles",
+        "private": false,
+        "run_as_system": true
     }
 ]
