@@ -2,5 +2,9 @@
     {
         "name": "Function",
         "private": false
+    },
+    {
+        "name": "GetAllArticles",
+        "private": false
     }
 ]
