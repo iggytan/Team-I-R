@@ -1,10 +1,6 @@
 [
     {
-        "name": "Function",
-        "private": false
-    },
-    {
-        "name": "getAllArticles",
+        "name": "GetAllArticles",
         "private": false
     }
 ]
