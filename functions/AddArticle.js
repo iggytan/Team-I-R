@@ -2,7 +2,6 @@
 exports = function(request, response) {
     var mycollection = context.services.get("mongodb-atlas").db("zhitecliffe").collection("articles");
     mycollection.insertOne(request.query);
-    console.log(request.query);
     var test = {"request.query" : request.query, "response": response}
     return "test";
 };
