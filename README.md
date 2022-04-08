@@ -7,5 +7,6 @@ Applications/languages used:
 1. MongoDB
 2. MongoDB Atlas
 3. MongoDB Realm
-4. PHP/XAMMP
+4. HTML
+5. Javascript
 
