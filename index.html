@@ -85,21 +85,21 @@
         });
     }
 
-    tutorForm.onsubmit = async (e) => {
-        e.preventDefault();
+    // tutorForm.onsubmit = async (e) => {
+    //     e.preventDefault();
 
-        let response = await fetch(
-            "https://ap-southeast-2.aws.data.mongodb-api.com/app/schoolproject-rwark/endpoint/GetOneArticle", 
-            {
-                method: 'GET',
-                body: new FormData(tutorForm)
-            }
-        ).then(response => {
-            console.log(response);
-        });
+    //     let response = await fetch(
+    //         "https://ap-southeast-2.aws.data.mongodb-api.com/app/schoolproject-rwark/endpoint/GetOneArticle", 
+    //         {
+    //             method: 'GET',
+    //             body: new FormData(tutorForm)
+    //         }
+    //     ).then(response => {
+    //         console.log(response);
+    //     });
 
-        let result = await response;
-    }
+    //     let result = await response;
+    // }
 
     
 
