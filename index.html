@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Subject reference materials</h1>
+    <form action="">
+        <p>Please choose a subject:</p>
+        <select name="subjects" id="subjects">
+            <option value="art">Art</option>
+            <option value="mathematics">Mathematics</option>
+            <option value="technology">Technology</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <h2>Tutors only!</h2>
+
+    <p>Search for an article:</p>
+    <form id="tutorSearchForm">
+        <input name="search_name" type="text" placeholder="Search name (must be exactly the same!)">
+        <input name="" type="submit" value="Submit"></button>
+    </form>
+
+    <p>Create a new article:</p>
+    <form id="tutorForm">
+        <input name="category" type="text" id="category" placeholder="Category">
+        <input name="type" type="text" id="type" placeholder="Type">
+        <input name="name" type="text" id="name" placeholder="Name">
+        <input name="born" type="text" id="born" placeholder="Born">
+        <input name="died" type="text" id="died" placeholder="Died">
+        <input name="nationality" type="text" id="nationality" placeholder="Nationality">
+        <input name="notable_work" type="text" id="notable_work" placeholder="Known for">
+        <textarea name="about" id="about" cols="30" rows="10" placeholder="About"></textarea>
+        <input name="year" type="text" id="year" placeholder="Year">
+        <input name="medium" type="text" id="medium" placeholder="Medium">
+        <input name="dimensions" type="text" id="dimensions" placeholder="Dimensions">
+        <input name="location" type="text" id="location" placeholder="Locations">
+        <input name="designed_by" type="text" id="designed_by" placeholder="Designed_by">
+        <input name="developer" type="text" id="developer" placeholder="Developer">
+        <input name="" type="submit" value="Submit"></button>
+    </form>
+
+    
+
+</body>
+
+<script>
+
+    function getAllArticles() {
+        fetch(
+        "https://ap-southeast-2.aws.data.mongodb-api.com/app/schoolproject-rwark/endpoint/GetAllArticles"
+        ).then(response => {
+            return response.json();
+        }).then(data => {
+            console.log(data);
+        });
+    }
+
+    // getAllArticles();
+
+    // Events
+
+    tutorForm.onsubmit = async (e) => {
+        e.preventDefault();
+
+        let response = await fetch(
+            "https://ap-southeast-2.aws.data.mongodb-api.com/app/schoolproject-rwark/endpoint/AddArticle", 
+            {
+                method: 'POST',
+                body: new FormData(tutorForm)
+            }
+        ).then(response => {
+            alert("Article added.");
+        });
+    }
+
+    tutorForm.onsubmit = async (e) => {
+        e.preventDefault();
+
+        let response = await fetch(
+            "https://ap-southeast-2.aws.data.mongodb-api.com/app/schoolproject-rwark/endpoint/GetOneArticle", 
+            {
+                method: 'GET',
+                body: new FormData(tutorForm)
+            }
+        ).then(response => {
+            console.log(response);
+        });
+
+        let result = await response;
+    }
+
+    
+
+</script>
+
+<style>
+    body {
+        max-width: 70vw;
+    }
+</style>
+
+</html>
+
