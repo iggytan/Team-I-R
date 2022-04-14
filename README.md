@@ -17,5 +17,7 @@ Step-by-step instructions on how to setup the website:
 
 How to connect to the MongoDB Atlas database through Compass:
 mongodb+srv://<username>:<password>@cluster0.jxwf2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
 Username and password will be given to you through private messaging.
+
 Replace username and password with your respective credentials.
